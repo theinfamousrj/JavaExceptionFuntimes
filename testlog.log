@@ -1,0 +1,4 @@
+11:47:44,402  INFO LoggableClass:23 - Info message
+11:47:44,404  WARN LoggableClass:27 - Warn message
+11:47:44,404 ERROR LoggableClass:31 - Error message
+11:47:44,405 FATAL LoggableClass:35 - Fatal message

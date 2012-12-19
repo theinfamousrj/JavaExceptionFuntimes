@@ -22,11 +22,15 @@ public class Mailer {
 		this.smtpPass = password;
 	}
 	
-	public void createAndSendSimpleEmail(String from, String to, String subject, String message) {
+	public void createAndSendSimpleEmailWithAuth(String from, String to, String subject, String message) {
 		email.setHostName(this.smtpServer);
 		email.setSmtpPort(this.smtpPort);
 		email.setAuthenticator(new DefaultAuthenticator(this.smtpUser, this.smtpPass));
 		email.setTLS(true);
+		this.createAndSendSimpleEmail(from, to, subject, message);
+	}
+	
+	public void createAndSendSimpleEmail(String from, String to, String subject, String message) {
 		try {
 			email.setDebug(false);
 			email.setFrom(from);
